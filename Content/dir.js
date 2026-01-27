@@ -1,8 +1,11 @@
-function openDirectory() {
-  // Opening with specific width/height forces it into a separate window
-  window.open(
-    'directory.html', 
-    'SiteDirectory', 
-    'width=400,height=500,resizable=yes,scrollbars=yes'
-  );
-}
+// Wait for the button to exist
+const btn = document.getElementById('directoryButton');
+
+btn.addEventListener('click', () => {
+    // Opens the directory in a small independent window
+    window.open(
+        'directory.html', 
+        'SiteDirectory', 
+        'width=350,height=450,resizable=yes'
+    );
+});
