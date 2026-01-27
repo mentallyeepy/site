@@ -172,9 +172,31 @@ div.content {
 </div>
 <!--MentallyEepy/CodenamePixel is the owner. I am the owner, do not touch my website code, God bless, may you live long and prosper, goodbye now.-->
 
+<script>
+    window.onload = function() {
+        var audio = document.getElementById("backgroundMusic");
+        var button = document.getElementById("musicToggleButton");
+
+        // Prevent autoplay issues: start muted or require user interaction first
+        audio.volume = 0.5; // Optional: set initial volume
+
+        button.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                button.textContent = "Pause Music";
+            } else {
+                audio.pause();
+                button.textContent = "Play Music";
+            }
+        });
+    }
+</script>
+
+
 </body>
 
 	</html>
+
 
 
 
