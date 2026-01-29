@@ -193,25 +193,44 @@ body {
 
 
 <div class="content">
-<h1>Blog</h1>
-<h2>September Week 4, 2025</h2>
-<p>Hello everyone. This is my first entry for my blog. I hope you all enjoy.</p>
-<p>I honestly don't know what to put. Maybe some stuff about the Rec Room and stuff like that. So for Rec Room, it's like an arcade with a bar, typical. The games there are the usual, PAC-MAN, Wheel of Fortune, table hockey, etc. The food is pretty good, the serving time is slow, but this isn't a fast food chain, so I can understand. The ticket prices are fairly ok, $35 (Canadian) for 160 tickets, pretty ok. Idk, it's pretty nice there. A great way to gamble away your savings. <b>8/10</b></p>
-
-<h2>October Week 1, 2025</h2>
-<p>Hello again. This is my 2<sup>nd</sup> entry.</p>
-<p>To be honest, I might stop posting here, I have a <b>lot</b> of work to do. Anyways, today's topic is School Band. School Band isn't a cult and you should totally join it! (｡•̀ᴗ-)✧ All jokes aside, it's a great way to earn credits in highschool if you already play an instrument and can read <u>sheet music</u>. If you don't know how to, that's alright, you can always try to learn. Band is also a great way to meet people too.</p>
-
-<p hidden>I like to move it move it</p>
-<p></p>
-<a hidden href='https://www.free-counters.org/'>https://www.free-counters.org/</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=3e7f3bcaa7b57f0cdbc4a57608f21ba66e94f2d8'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1401315/t/9"></script>
+	<div class="content-box">
+		<h1>Blog</h1>
+		<h2>September Week 4, 2025</h2>
+		<p>Hello everyone. This is my first entry for my blog. I hope you all enjoy.</p>
+		<p>I honestly don't know what to put. Maybe some stuff about the Rec Room and stuff like that. So for Rec Room, it's like an arcade with a bar, typical. The games there are the usual, PAC-MAN, Wheel of Fortune, table hockey, etc. The food is pretty good, the serving time is slow, but this isn't a fast food chain, so I can understand. The ticket prices are fairly ok, $35 (Canadian) for 160 tickets, pretty ok. Idk, it's pretty nice there. A great way to gamble away your savings. <b>8/10</b></p>
+		
+		<h2>October Week 1, 2025</h2>
+		<p>Hello again. This is my 2<sup>nd</sup> entry.</p>
+		<p>To be honest, I might stop posting here, I have a <b>lot</b> of work to do. Anyways, today's topic is School Band. School Band isn't a cult and you should totally join it! (｡•̀ᴗ-)✧ All jokes aside, it's a great way to earn credits in highschool if you already play an instrument and can read <u>sheet music</u>. If you don't know how to, that's alright, you can always try to learn. Band is also a great way to meet people too.</p>
+		
+		<p hidden>I like to move it move it</p>
+		<p></p>
+		
+		<!--Site counter-->
+		<p style="font-family: Tahoma; font-size: 12px;">
+		Visitors:
+		<span id="counter">000000</span>
+		</p>
+		
+		<script>
+		let visits = localStorage.getItem("siteVisits");
+		
+		if (!visits) visits = 0;
+		visits++;
+		
+		localStorage.setItem("siteVisits", visits);
+		
+		document.getElementById("counter").textContent =
+		visits.toString().padStart(6, "0");
+		</script>
+	</div>
 </div>
 <!--MentallyEepy/CodenamePixel is the owner. I am the owner, do not touch my website code, God bless, may you live long and prosper, goodbye now.-->
 
 </body>
 
 	</html>
+
 
 
 
