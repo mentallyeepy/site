@@ -195,21 +195,38 @@ body {
 
 
 <div class="content">
-<h1>Science</h1>
-<h2>Notes</h2>
-<a href="Content/Documents/Science 10.rtf">Science 10 (may need extra context)</a>
-
-<p hidden>I like to move it move it</p>
-<p></p>
-<a hidden href='https://www.free-counters.org/'>https://www.free-counters.org/</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=3e7f3bcaa7b57f0cdbc4a57608f21ba66e94f2d8'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1401315/t/9"></script>
-
+	<div class="content-box">
+		<h1>Science</h1>
+		<h2>Notes</h2>
+		<a href="Content/Documents/Science 10.rtf">Science 10 (may need extra context)</a>
+		
+		<p hidden>I like to move it move it</p>
+		<p></p>
+		<!--Site counter-->
+		<p style="font-family: Tahoma; font-size: 12px;">
+		Visitors:
+		<span id="counter">000000</span>
+		</p>
+		
+		<script>
+		let visits = localStorage.getItem("siteVisits");
+		
+		if (!visits) visits = 0;
+		visits++;
+		
+		localStorage.setItem("siteVisits", visits);
+		
+		document.getElementById("counter").textContent =
+		visits.toString().padStart(6, "0");
+		</script>
+	</div>
 </div>
 <!--MentallyEepy/CodenamePixel is the owner. I am the owner, do not touch my website code, God bless, may you live long and prosper, goodbye now.-->
 
 </body>
 
 	</html>
+
 
 
 
