@@ -56,10 +56,18 @@ body {
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.content-box {
+  background: #f5ffff;
+  border: 2px solid #006666;
+  padding: 16px;
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #003333;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
@@ -187,17 +195,19 @@ div.content {
 
 
 <div class="content">
-<h1>Home</h1>
-<p>Welcome to my website.</p>
-<p>I like to make music and also share music with people. It's nice to do stuff like that tbh...</p>
-<h2>Upcoming Music</h2>
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/prerelease/6cbX1vLqju9yb5GotzqWtc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+	<div class="context-box">
+		<h1>Home</h1>
+		<p>Welcome to my website.</p>
+		<p>I like to make music and also share music with people. It's nice to do stuff like that tbh...</p>
+		<h2>Upcoming Music</h2>
+		<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/prerelease/6cbX1vLqju9yb5GotzqWtc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-<button id="directoryButton" class="main-button">Site Guide</button>
-<p hidden>I like to move it move it</p>
-<p></p>
-<a hidden href='https://www.free-counters.org/'>https://www.free-counters.org/</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=3e7f3bcaa7b57f0cdbc4a57608f21ba66e94f2d8'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1401315/t/9"></script>
+		<button id="directoryButton" class="main-button">Site Guide</button>
+		<p hidden>I like to move it move it</p>
+		<p></p>
+		<a hidden href='https://www.free-counters.org/'>https://www.free-counters.org/</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=3e7f3bcaa7b57f0cdbc4a57608f21ba66e94f2d8'></script>
+		<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1401315/t/9"></script>
+	</div>
 </div>
 	
 <!--MentallyEepy/CodenamePixel is the owner. I am the owner, do not touch my website code, God bless, may you live long and prosper, goodbye now.-->
@@ -205,6 +215,7 @@ div.content {
 </body>
 
 	</html>
+
 
 
 
