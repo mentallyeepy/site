@@ -41,34 +41,57 @@ body {
       <li><a href="Forensics.html" target="_blank">Forensics</a></li>
     </ul>
   </ul>
-  <audio id="backgroundMusic" loop>
-    <source src="Content/bgm.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <button id="musicToggleButton" class="main-button">Play Music</button>
+<!-- Music controls -->
+<select id="songSelect" class="custom-button">
+  <option value="Content/music/bgm.mp3">Do the Dougie – Dance</option>
+  <option value="Content/music/bgm2.mp3">Honey Pot – Cool Jazz</option>
+</select>
 
+<br><br>
+
+<button id="musicToggleButton" class="main-button">Play Music</button>
+
+<audio id="backgroundMusic">
+  <source src="Content/music/song1.mp3" type="audio/mpeg">
+</audio>
+
+<!--Fish-->
   <div style="text-align: center; margin-top: 20px;">
     <img src="Content/gifs/fsh-spin.gif" alt="Spinning Fish" width="100">
  </div>
 
+<!--Music Script-->
 <script>
-    window.onload = function() {
-        var audio = document.getElementById("backgroundMusic");
-        var button = document.getElementById("musicToggleButton");
+window.onload = function () {
+  const audio = document.getElementById("backgroundMusic");
+  const button = document.getElementById("musicToggleButton");
+  const selector = document.getElementById("songSelect");
 
-        // Prevent autoplay issues: start muted or require user interaction first
-        audio.volume = 0.5; // Optional: set initial volume
+  audio.volume = 0.5;
 
-        button.addEventListener("click", function() {
-            if (audio.paused) {
-                audio.play();
-                button.textContent = "Pause Music";
-            } else {
-                audio.pause();
-                button.textContent = "Play Music";
-            }
-        });
+  button.addEventListener("click", function () {
+    if (audio.paused) {
+      audio.play();
+      button.textContent = "Pause Music";
+    } else {
+      audio.pause();
+      button.textContent = "Play Music";
     }
+  });
+
+  selector.addEventListener("change", function () {
+    const wasPlaying = !audio.paused;
+
+    audio.src = this.value;
+    audio.load();
+
+    if (wasPlaying) {
+      audio.play();
+    }
+
+    button.textContent = "Pause Music";
+  });
+};
 </script>
 
 </body>
