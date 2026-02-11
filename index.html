@@ -2,15 +2,83 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Under Construction</title>
 
-<meta http-equiv="refresh" content="0; URL='https://mentallyeepy.github.io/site/Home.html'">
-<title>Redirecting...</title>
+<link rel="icon" type="image/x-icon" href="Content/index/favicon.ico">
 
-<link rel="icon" type="image/x-icon" href="/Content/index/favicon.ico">
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  background: #e6f2f2;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      #e6f2f2,
+      #e6f2f2 10px,
+      #dfeeee 10px,
+      #dfeeee 20px
+    );
+  text-align: center;
+  padding-top: 80px;
+}
 
+.box {
+  display: inline-block;
+  background: #f5ffff;
+  border: 2px solid #006666;
+  padding: 25px;
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #003333;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+.blink {
+  animation: blinker 1s linear infinite;
+  font-weight: bold;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.counter {
+  margin-top: 20px;
+  font-size: 12px;
+  font-family: Tahoma;
+}
+</style>
 </head>
+
 <body>
-<p>If you are not redirected automatically, follow this <a href="https://mentallyeepy.github.io/site/Home.html">link</a>.</p>
-<img src="Content\index\nerd.webp">
+
+<div class="box">
+  <h1>🚧 Site Under Construction 🚧</h1>
+  <p>This website is currently being updated.</p>
+  <p class="blink">Please check back soon!</p>
+
+  <br>
+
+  <img src="Content/gifs/underconstruction.gif" width="150" alt="Under Construction">
+
+  <div class="counter">
+    Visitors during construction:
+    <span id="counter">000000</span>
+  </div>
+</div>
+
+<script>
+let visits = localStorage.getItem("constructionVisits");
+if (!visits) visits = 0;
+visits++;
+localStorage.setItem("constructionVisits", visits);
+document.getElementById("counter").textContent =
+visits.toString().padStart(6, "0");
+</script>
+
 </body>
 </html>
